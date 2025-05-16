@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+    "name": "BrieflyAI",
+    "version": "1.0",
+    "description": "AI-powered reading assistant",
+    "permissions": [
+        "activeTab",
+        "storage",
+        "scripting",
+        "sidePanel"
+    ],
+    "action": {
+        "default_title": "BrieflyAI"
+
+},
+
+"side_panel": {
+    "default_path": "side_panel.html"
+},
+"background": {
+    "service_worker": "background.js"
+},
+"host_permissions": [
+    "https://localhost:8080/*",
+    "<all_urls>"
+],
+"content_security_policy": {
+    "extension_pages": "script-src 'self';  object-src 'self';"
+}
+
+}
